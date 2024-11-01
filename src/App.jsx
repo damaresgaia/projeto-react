@@ -1,6 +1,12 @@
+import { useState } from 'react'
 import './App.css'
 
 function App() {
+
+  const [id, setId] = useState();
+  const [produto, setProduto] = useState();
+  const [valor, setValor] = useState();
+  const [quantidade, setQuantidade] = useState();
 
   const Cadastrar = (e) => {
     e.preventDefault()
