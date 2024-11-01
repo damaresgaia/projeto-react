@@ -2,11 +2,18 @@ import './App.css'
 
 function App() {
 
+  const Cadastrar = (e) => {
+    e.preventDefault()
+
+    alert("Cadastrando...")
+  }
+
+
   return (
     <div className='container'>
       <h1 className='mt-3 mb-3'>Cadastro de Produtos</h1>
 
-      <form>
+      <form onSubmit={Cadastrar}>
         <div className="row mb-3">
           <div className="col">
             <input
@@ -69,17 +76,17 @@ function App() {
             <td>Valor</td>
             <td>Qtd</td>
             <td>
-              <img width={100} src="https://m.media-amazon.com/images/I/613PZt698DL._AC_SX679_.jpg" alt="imagem do produto" />
+              <img width={40} src="https://m.media-amazon.com/images/I/613PZt698DL._AC_SX679_.jpg" alt="imagem do produto" />
             </td>
             <td>
               <div className='btn-group d-flex gap-1'>
                 <button className='btn btn-outline-warning'>
-                <i class="fa-solid fa-pen-to-square"></i>
+                  <i className="fa-solid fa-pen-to-square"></i>
                 </button>
                 <button className='btn btn-outline-danger'>
-                <i class="fa-solid fa-trash"></i>
+                  <i className="fa-solid fa-trash"></i>
                 </button>
-              </div>                                   
+              </div>
             </td>
           </tr>
         </tbody>
