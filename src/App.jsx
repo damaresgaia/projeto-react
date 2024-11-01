@@ -68,8 +68,15 @@ function App() {
             <td>Nome do Produto</td>
             <td>Valor</td>
             <td>Qtd</td>
-            <td>Url da imagem</td>
-            <td>Ações</td>
+            <td>
+              <img src="" alt="imagem do produto" />
+            </td>
+            <td>
+              <div className='btn-group d-flex gap-1'>
+                <button className='btn btn-outline-success'>Editar</button>
+                <button className='btn btn-outline-danger'>Excluir</button>
+              </div>                                   
+            </td>
           </tr>
         </tbody>
 
