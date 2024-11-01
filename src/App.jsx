@@ -69,12 +69,16 @@ function App() {
             <td>Valor</td>
             <td>Qtd</td>
             <td>
-              <img src="" alt="imagem do produto" />
+              <img width={100} src="https://m.media-amazon.com/images/I/613PZt698DL._AC_SX679_.jpg" alt="imagem do produto" />
             </td>
             <td>
               <div className='btn-group d-flex gap-1'>
-                <button className='btn btn-outline-success'>Editar</button>
-                <button className='btn btn-outline-danger'>Excluir</button>
+                <button className='btn btn-outline-warning'>
+                <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button className='btn btn-outline-danger'>
+                <i class="fa-solid fa-trash"></i>
+                </button>
               </div>                                   
             </td>
           </tr>
