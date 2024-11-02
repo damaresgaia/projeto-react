@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
 
@@ -7,9 +7,23 @@ function App() {
   const [produto, setProduto] = useState();
   const [valor, setValor] = useState();
   const [quantidade, setQuantidade] = useState();
+  const [foto, setFoto] = useState();
+
+  const [classInserir, setClassInserir] = useState('');
+  const [classAlterar, setClassAlterar] = useState('sumir');
 
   const Cadastrar = (e) => {
     e.preventDefault()
+
+    if(produto === ""){
+      alert("Por favor preencha o campo nome do produto")
+    }else if(valor === ""){
+      alert("Por favor preencha o campo valor do produto")
+    }else if(quantidade === ""){
+      alert("Por favor preencha o campo quantidade do produto")
+    }else{
+      alert("Produto cadastrado com sucesso!")
+    }
 
     alert("Cadastrando...")
   }
@@ -24,8 +38,9 @@ function App() {
           <div className="col">
             <input
               type="text"
+              value={produto}
               placeholder="Nome do Produto"
-              className="form-control"
+              className="form-control"           
             />
           </div>
 
@@ -58,8 +73,8 @@ function App() {
         </div>
 
         <div className='btn-group d-flex gap-3'>
-          <button className='btn btn-outline-success'>Inserir</button>
-          <button className='btn btn-outline-primary'>Salvar</button>
+          <button className={`btn btn-outline-success ${classInserir}`}>Inserir</button>
+          <button className={`btn btn-outline-primary ${classAlterar}`}>Salvar</button>
         </div>
 
       </form>
