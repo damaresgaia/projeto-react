@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
+import axios from 'axios';
 
 function App() {
 
-  const url = "http://localhost:3000/produto"
+  const url = "http://localhost:3000/produto";
 
   const [id, setId] = useState('');
   const [produto, setProduto] = useState('');
@@ -13,7 +14,21 @@ function App() {
 
   const [classInserir, setClassInserir] = useState('');
   const [classAlterar, setClassAlterar] = useState('sumir');
+  const [data, setData] = useState([]);
 
+  /*** Carregar dados do banco */
+  useEffect(() => {
+    axios.get(url)
+      .then(res => setData(res.data))
+  }, [data, setData]);
+
+  /*** Inserir dados do banco */
+  const Inserir = () => {
+    axios.post(url, {
+      produto, valor, quantidade, foto
+    })
+  }
+  /*** Cadastrando dados no banco */
   const Cadastrar = (e) => {
     e.preventDefault()
 
@@ -27,8 +42,15 @@ function App() {
       alert("Por favor preencha o campo foto do produto")
     } else {
       alert("Produto cadastrado com sucesso!")
+      Inserir()
+      setProduto('')
+      setValor('')
+      setQuantidade('')
+      setFoto('')
     }
   }
+
+  /*** Remover dados do banco */
 
 
   return (
@@ -98,25 +120,29 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope='row'>1</th>
-            <td>Nome do Produto</td>
-            <td>Valor</td>
-            <td>Qtd</td>
-            <td>
-              <img width={40} src="https://m.media-amazon.com/images/I/613PZt698DL._AC_SX679_.jpg" alt="imagem do produto" />
-            </td>
-            <td>
-              <div className='btn-group d-flex gap-1'>
-                <button className='btn btn-outline-warning'>
-                  <i className="fa-solid fa-pen-to-square"></i>
-                </button>
-                <button className='btn btn-outline-danger'>
-                  <i className="fa-solid fa-trash"></i>
-                </button>
-              </div>
-            </td>
-          </tr>
+          {data.map((item) => (
+            <tr key={item.id}>
+              <th scope='row'>{item.id}</th>
+              <td>{item.produto}</td>
+              <td>{item.valor}</td>
+              <td>{item.quantidade}</td>
+              <td>
+                <img width={40} src={item.foto} alt="imagem do produto" />
+              </td>
+              <td>
+                <div className='btn-group d-flex gap-1'>
+                  <button className='btn btn-outline-warning'>
+                    <i className="fa-solid fa-pen-to-square"></i>
+                  </button>
+                  <button className='btn btn-outline-danger'>
+                    <i className="fa-solid fa-trash"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          ))
+
+          }
         </tbody>
 
       </table>

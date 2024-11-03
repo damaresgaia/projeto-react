@@ -1,11 +1,39 @@
 {
-    "produto": [
-        {
-            "id": 1,
-            "produto": "Kit teclado",
-            "valor": "R$ 200,00",
-            "quantidade": 20,
-            "foto": "..."
-        }
-    ]
+  "produto": [
+    {
+      "id": 1,
+      "produto": "Kit teclado",
+      "valor": "R$ 200,00",
+      "quantidade": 20,
+      "foto": "https://http2.mlstatic.com/D_NQ_NP_607214-MLU72748274197_112023-O.webp"
+    },
+    {
+      "id": 2,
+      "produto": "Notebook Acer",
+      "valor": "R$ 2.500,00",
+      "quantidade": 11,
+      "foto": "https://m.media-amazon.com/images/I/613PZt698DL._AC_SX679_.jpg"
+    },
+    {
+      "id": "f9d6",
+      "produto": "Tv Smart",
+      "valor": "R$ 1.900,00",
+      "quantidade": "27",
+      "foto": "https://m.media-amazon.com/images/I/71paaRmpTpL.__AC_SX300_SY300_QL70_ML2_.jpg"
+    },
+    {
+      "id": "e933",
+      "produto": "Tv Smart",
+      "valor": "R$ 1.900,00",
+      "quantidade": "27",
+      "foto": "https://m.media-amazon.com/images/I/71paaRmpTpL.__AC_SX300_SY300_QL70_ML2_.jpg"
+    },
+    {
+      "id": "e9cb",
+      "produto": "Console Xbox",
+      "valor": "R$ 800,00",
+      "quantidade": "23",
+      "foto": "https://m.media-amazon.com/images/I/51pNvD-nsvL.__AC_SX300_SY300_QL70_ML2_.jpg"
+    }
+  ]
 }
