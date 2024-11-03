@@ -78,10 +78,9 @@ function App() {
           </div>
         </div>
 
-        <div className='btn-group d-flex gap-3'>
-          <button type='submit' className={`btn btn-outline-success ${classInserir}`}>Inserir</button>
-          <button className={`btn btn-outline-primary ${classAlterar}`}>Salvar</button>
-        </div>
+        <button type='submit' className={`btn btn-outline-success ${classInserir}`}>Inserir</button>
+        <button className={`btn btn-outline-primary ${classAlterar}`}>Salvar</button>
+
 
       </form>
 
@@ -92,7 +91,7 @@ function App() {
             <th scope='col'>Nome do Produto</th>
             <th scope='col'>Valor</th>
             <th scope='col'>Qtd</th>
-            <th scope='col'>Url da imagem</th>
+            <th scope='col'>Imagem</th>
             <th scope='col'>Ações</th>
           </tr>
         </thead>

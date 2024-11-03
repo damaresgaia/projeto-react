@@ -18,3 +18,12 @@ a{
 .sumir{
   display: none;
 }
+
+img{
+  transition: .7s;
+  cursor: pointer;
+}
+
+img:hover{
+  transform: scale(5.5);
+}
