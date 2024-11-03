@@ -1,0 +1,11 @@
+{
+    "produto": [
+        {
+            "id": 1,
+            "produto": "Kit teclado",
+            "valor": "R$ 200,00",
+            "quantidade": 20,
+            "foto": "..."
+        }
+    ]
+}

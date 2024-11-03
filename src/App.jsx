@@ -3,6 +3,8 @@ import './App.css';
 
 function App() {
 
+  const url = "http://localhost:3000/produto"
+
   const [id, setId] = useState('');
   const [produto, setProduto] = useState('');
   const [valor, setValor] = useState('');
@@ -31,9 +33,9 @@ function App() {
 
   return (
     <div className='container'>
-      <h1 className='mt-3 mb-3'>Cadastro de Produtos</h1>
+      <h1 className='mt-5 mb-5 text-center'>Cadastro de Produtos</h1>
 
-      <form onSubmit={Cadastrar}>
+      <form onSubmit={Cadastrar} className='mb-5'>
         <div className="row mb-3">
           <div className="col">
             <input
@@ -92,7 +94,7 @@ function App() {
             <th scope='col'>Valor</th>
             <th scope='col'>Qtd</th>
             <th scope='col'>Imagem</th>
-            <th scope='col'>Ações</th>
+            <th scope='col' className='text-center'>Ações</th>
           </tr>
         </thead>
         <tbody>
